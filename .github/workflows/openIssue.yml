@@ -9,19 +9,19 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm main.js
-      env: 
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Run main.py
+      run: |
+        python main.py
+      env:
         MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
