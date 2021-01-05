@@ -28,6 +28,6 @@ jobs:
           --header 'authorization: Bearer ${{ secrets.TOKEN }}' \
           --header 'content-type: application/json' \
           --data "{
-            \"title\": \"$(date +'%Y %M %D')\",
-            \"body\": \"Today Review\"
+            \"title\": \"$(date +'%Y %m %d')\",
+            \"body\": \"\"
             }"
