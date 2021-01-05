@@ -22,12 +22,12 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Create Issue
-      run: |
-        curl --request POST \
-        --url https://api.github.com/repos/${{ github.repository }}/issues \
-        --header 'authorization: Bearer ${{ secrets.TOKEN }}' \
-        --header 'content-type: application/json' \
-        --data '{
-          "title": "Automated issue for commit: ${{ github.sha }}",
-          "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ github.sha }}_."
-          }'
+        run: |
+          curl --request POST \
+          --url https://api.github.com/repos/${{ github.repository }}/issues \
+          --header 'authorization: Bearer ${{ secrets.TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "title": "Automated issue for commit: ${{ github.sha }}",
+            "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ github.sha }}_."
+            }'
