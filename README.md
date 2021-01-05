@@ -17,3 +17,4 @@
 - [cron test](https://crontab.guru/)
 - [Authentication in a workflow](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow)
 - [Example calling the REST API](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#example-calling-the-rest-api)
+- schedule cron을 적용하기 위해선 먼저 최초의 한 번은 수동으로 실행시켜야 함(실험으로 발견)
