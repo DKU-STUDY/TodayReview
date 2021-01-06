@@ -1,0 +1,25 @@
+{
+  "name": "TodayReview",
+  "version": "1.0.0",
+  "description": "오늘 한 공부나 있었던 일들을 기록합니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DKU-STUDY/TodayReview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DKU-STUDY/TodayReview/issues"
+  },
+  "homepage": "https://github.com/DKU-STUDY/TodayReview#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.2"
+  }
+}

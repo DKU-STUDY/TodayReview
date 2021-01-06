@@ -21,14 +21,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a single command using the runners shell
-      - name: Create Issue
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v2
+      - uses: zcong1993/setup-timezone@master
+        with:
+          timezone: Asia/Seoul
+      - name: npm install, build, and test
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          REPO: ${{ github.repository }}
         run: |
-          curl --request POST \
-          --url https://api.github.com/repos/${{ github.repository }}/issues \
-          --header 'authorization: Bearer ${{ secrets.TOKEN }}' \
-          --header 'content-type: application/json' \
-          --data "{
-            \"title\": \"$(date +'%Y %m %d')\",
-            \"body\": \"\"
-            }"
+          npm install
+          npm run start
