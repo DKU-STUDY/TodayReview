@@ -3,7 +3,7 @@ const dayjs = require("dayjs");
 
 axios.post(`https://api.github.com/repos/${process.env.REPO}/issues`, {
   title: dayjs().format("YYYY MM DD"),
-  body: dayjs().format("YYYY-MM-DD HH:mm:ss")
+  body: ''
 }, {
   headers: {
     authorization: `Bearer ${process.env.TOKEN}`
