@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/DKU-STUDY/TodayReview#readme",
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "dayjs": "^1.10.2"
   }
 }
